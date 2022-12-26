@@ -6,6 +6,7 @@ use App\Repository\CommentRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: CommentRepository::class)]
+#[ORM\HasLifecycleCallbacks]
 class Comment
 {
     #[ORM\Id]
@@ -21,7 +22,7 @@ class Comment
     private $photoFilename;
 
     #[ORM\Column(type: 'datetime_immutable')]
-    private $createAt;
+    private $createdAt;
 
     #[ORM\Column(type: 'string', length: 255)]
     private $email;
@@ -40,6 +41,12 @@ class Comment
     public function getId(): ?int
     {
         return $this->id;
+    }
+
+    #[ORM\PrePersist]
+    public function setCreatedAtValue()
+    {
+        $this->createdAt = new \DateTimeImmutable();
     }
 
     public function getConference(): ?Conference
@@ -66,14 +73,14 @@ class Comment
         return $this;
     }
 
-    public function getCreateAt(): ?\DateTimeImmutable
+    public function getCreatedAt(): ?\DateTimeImmutable
     {
-        return $this->createAt;
+        return $this->createdAt;
     }
 
-    public function setCreateAt(\DateTimeImmutable $createAt): self
+    public function setCreatedAt(\DateTimeImmutable $createdAt): self
     {
-        $this->createAt = $createAt;
+        $this->createdAt = $createdAt;
 
         return $this;
     }
