@@ -2,7 +2,6 @@
 
 namespace App\Entity;
 
-use App\EntityListener\ConferenceEntityListener;
 use App\Repository\ConferenceRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
@@ -10,7 +9,6 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\String\Slugger\SluggerInterface;
 
 #[ORM\Entity(repositoryClass: ConferenceRepository::class)]
-#[ORM\EntityListeners([ConferenceEntityListener::class])]
 #[UniqueEntity('slug')]
 class Conference
 {
