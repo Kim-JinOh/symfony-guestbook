@@ -37,6 +37,9 @@ class Comment
     #[Assert\NotBlank]
     private $text;
 
+    #[ORM\Column(type: 'string', length: 255, options: ["default" => "submitted"])]
+    private $state = 'submitted';
+
     public function __toString(): string
     {
         return (string) $this->getPhotoFilename();
@@ -121,6 +124,18 @@ class Comment
     public function setText(string $text): self
     {
         $this->text = $text;
+
+        return $this;
+    }
+
+    public function getState(): ?string
+    {
+        return $this->state;
+    }
+
+    public function setState(string $state): self
+    {
+        $this->state = $state;
 
         return $this;
     }

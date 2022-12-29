@@ -3262,16 +3262,16 @@
         },
         {
             "name": "symfony/doctrine-messenger",
-            "version": "v5.4.3",
+            "version": "v5.4.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/doctrine-messenger.git",
-                "reference": "335428f424807178c57b89fd2bed714fba4bf4af"
+                "reference": "e44bc95cf7f9ad34b7a993b9aaa93703e0bc35eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/doctrine-messenger/zipball/335428f424807178c57b89fd2bed714fba4bf4af",
-                "reference": "335428f424807178c57b89fd2bed714fba4bf4af",
+                "url": "https://api.github.com/repos/symfony/doctrine-messenger/zipball/e44bc95cf7f9ad34b7a993b9aaa93703e0bc35eb",
+                "reference": "e44bc95cf7f9ad34b7a993b9aaa93703e0bc35eb",
                 "shasum": ""
             },
             "require": {
@@ -3285,7 +3285,7 @@
             },
             "require-dev": {
                 "doctrine/dbal": "^2.13|^3.0",
-                "doctrine/persistence": "^1.3|^2",
+                "doctrine/persistence": "^1.3|^2|^3",
                 "symfony/property-access": "^4.4|^5.0|^6.0",
                 "symfony/serializer": "^4.4|^5.0|^6.0"
             },
@@ -3315,7 +3315,7 @@
             "description": "Symfony Doctrine Messenger Bridge",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/doctrine-messenger/tree/v5.4.3"
+                "source": "https://github.com/symfony/doctrine-messenger/tree/v5.4.16"
             },
             "funding": [
                 {
@@ -3331,7 +3331,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-01-02T09:53:40+00:00"
+            "time": "2022-11-04T07:27:04+00:00"
         },
         {
             "name": "symfony/dotenv",
